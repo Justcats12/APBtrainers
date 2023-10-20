@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LXS case recognition trainer</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lucy Skipper" />
+	<link rel="stylesheet" href="styles/main.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="scripts/lexus.js"></script>
+</head>
+<body onload="caseupdate(); scramble()">
+    <h1>LXS trainer</h1>
+    <p>The UI couldn't be better</p>
+    <a href="./">Back to home</a>
+    <div class="container">
+    <iframe id="showcase" type="text/html" src="http://cube.rider.biz/visualcube.php?fmt=svg&size=200&stage=f2l&case=" width="100%" height="300" scrolling="no"></iframe>
+    </div>
+    <p>View solution (Hover): <span id="seq" class="reveal">none</span></p>
+
+
+    <button onclick="scramble()">Rescramble</button>
+    <script>
+    document.body.onkeyup = function(e) {
+        if (e.key == " " ||
+            e.code == "Space" ||      
+            e.keyCode == 32      
+        ) {
+          scramble();
+        }
+      }</script>
+    <p><ol>
+        <li>set up to the case</li>
+        <li>solve it</li>
+        <li>click rescramble/ press space</li>
+    </ol>
+    </p>
+    <h2>Settings</h2>
+    <input id="colorneutral" type="checkbox" name="color">
+    <label for="color">Color neutrality</label><br>
+    <input id="stagemask" type="checkbox" name="f2l">
+    <label for="f2l">mask U layer pieces (not compatible with color neutrality)</label><br>
+
+    <input id="ufr" type="checkbox" name="ufr" checked="true" onclick="caseupdate()">
+    <label for="ufr">UFR</label>
+    <input id="rfu" type="checkbox" name="rfu" onclick="caseupdate()">
+    <label for="rfu">RFU</label>
+    <input id="fur" type="checkbox" name="fur" onclick="caseupdate()">
+    <label for="fur">FUR</label>
+    <input id="dfr" type="checkbox" name="dfr" onclick="caseupdate()">
+    <label for="dfr">DFR</label>
+    <input id="rdf" type="checkbox" name="rdf" onclick="caseupdate()">
+    <label for="rdf">RDF</label>
+    <input id="frd" type="checkbox" name="frd" onclick="caseupdate()">
+    <label for="frd">FRD</label>
+    <h3>Select cases</h3>
+    <p>(Hold shift for quick select)</p>
+    <div id="caseselect">
+
+    </div>
+	
+    
+</body>
+</html>

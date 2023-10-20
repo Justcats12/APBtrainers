@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pair solved case recognition trainer</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lucy Skipper" />
+	<link rel="stylesheet" href="styles/main.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+</head>
+<body onload="scramble()">
+    <h1>Pair solved EO trainer</h1>
+    <p>bad UI because I'm too lazy</p>
+    <a href="./">Back to home</a>
+    <div class="container">
+    <iframe class="display" id="showcase" type="text/html" src="https://alg.cubing.net/?setup=x2" width="200%" height="200" scrolling="no"></iframe>
+    </div>
+    <p>View sequence (Hover): <span id="seq" class="reveal">none</span></p>
+    <div id="feedback">
+    <div class="optioncontainer">
+        <button class="option" id="11" onclick="submit(11)">
+            <img src="img/case/skip.png">
+        </button>
+        <button class="option" id="0"  onclick="submit(0)">
+            <img src="img/case/UFUR.png">
+        </button>
+        <button class="option" id="1"  onclick="submit(1)">
+            <img src="img/case/ULUR.png">
+        </button>
+        <button class="option" id="2"  onclick="submit(2)">
+            <img src="img/case/UFFR.png">
+        </button>
+        <button class="option" id="3"  onclick="submit(3)">
+            <img src="img/case/UFDR.png">
+        </button>
+        <button class="option" id="4" onclick="submit(4)">
+            <img src="img/case/FRDR.png">
+        </button>
+        
+        
+    </div>
+    <div class="optioncontainer">
+        <button class="option" id="5" onclick="submit(5)">
+            <img src="img/case/UFULUBUR.png">
+        </button>
+        <button class="option" id="6"  onclick="submit(6)">
+            <img src="img/case/UBURUFFR.png">
+        </button>
+        <button class="option" id="7"  onclick="submit(7)">
+            <img src="img/case/UBURUFDR.png">
+        </button>
+        <button class="option" id="8"  onclick="submit(8)">
+            <img src="img/case/UFURFRDR.png">
+        </button>
+        <button class="option" id="9"  onclick="submit(9)">
+            <img src="img/case/ULURFRDR.png">
+        </button>  
+        <button class="option" id="10"  onclick="submit(10)">
+            <img src="img/case/all.png">
+        </button>
+    </div></div>
+    <button onclick="scramble()">Rescramble</button>
+
+    <h2>Settings</h2>
+    <input id="colorneutral" type="checkbox" name="color">
+    <label for="color">Color neutrality</label>
+	
+    <script src="scripts/pairsolved.js"></script>
+</body>
+</html>

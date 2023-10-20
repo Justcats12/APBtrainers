@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>First block trainer</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lucy Skipper" />
+	<link rel="stylesheet" href="styles/main.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+</head>
+<body onload="scramble()" >
+    <h1>First block trainer</h1>
+    <p>For Roux or APB or anything for that matter</p>
+    <p>WIP, it kinda works but it's bad, the code is there if you inspect</p>
+    <a href="./">Back to home</a>
+    <div style="display: none;">
+    <div class="container">
+    <iframe class="display" id="showcase" type="text/html" src="https://alg.cubing.net/?setup=x2" width="200%" height="200" scrolling="no"></iframe>
+    </div>
+    <p>View sequence (select text): <span id="seq" class="reveal">none</span></p>
+    <p>reconstruct the DL 1x2x3 block</p>
+    <div id="feedback">
+    <div class="optioncontainer">
+        <button class="makemove" id="R" onclick="submit('R_')">
+            <p class="big">R</p>
+        </button>
+        <button class="makemove" id="L" onclick="submit('L_')">
+            <p class="big">L</p>
+        </button>
+        <button class="makemove" id="U" onclick="submit('U_')">
+            <p class="big">U</p>
+        </button>
+        <button class="makemove" id="D" onclick="submit('D_')">
+            <p class="big">D</p>
+        </button>
+        <button class="makemove" id="F" onclick="submit('F_')">
+            <p class="big">F</p>
+        </button>
+        <button class="makemove" id="B" onclick="submit('B_')">
+            <p class="big">B</p>
+        </button>
+    </div>
+    <div class="optioncontainer">
+        <button class="makemove" id="R-" onclick="submit('R-')">
+            <p class="big">R'</p>
+        </button>
+        <button class="makemove" id="L-" onclick="submit('L-')">
+            <p class="big">L'</p>
+        </button>
+        <button class="makemove" id="U-" onclick="submit('U-')">
+            <p class="big">U'</p>
+        </button>
+        <button class="makemove" id="D-" onclick="submit('D-')">
+            <p class="big">D'</p>
+        </button>
+        <button class="makemove" id="F-" onclick="submit('F-')">
+            <p class="big">F'</p>
+        </button>
+        <button class="makemove" id="B-" onclick="submit('B-')">
+            <p class="big">B'</p>
+        </button>
+    </div>
+</div>
+    <button onclick="scramble()">Rescramble</button>
+
+    <h2>Settings</h2>
+    <input id="colorneutral" type="checkbox" name="color">
+    <label for="color">Color neutrality</label><br>
+    <input id="moves" type="range" name="moves" min="2" max="10" value="8" onclick="updateLabel()">
+    <label for="moves" id="moveslabel">Block scramble moves: 8</label>
+    <script>
+        function updateLabel(){
+            let value = document.getElementById("moves").value;
+            document.getElementById("moveslabel").innerHTML = "Block scramble moves: " + value
+            scramble()
+        }
+    </script>
+	
+    <script src="scripts/firstblock.js"></script>
+</div>
+</body>
+
+</html>
+<!--
+    README:
+    This is my attempts at making a first block trainer, but I'm only a first year student so I failed
+    If you want to contribute to this page please let me know ^^
+    Javascript can be found at /scripts/firstblock.js
+-->
