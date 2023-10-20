@@ -183,7 +183,7 @@ function scramble(){
       //fetches the case
       currentcase = second;
       //this program is powered by visualcube
-    let link = "http://cube.rider.biz/visualcube.php?fmt=svg&size=200&case=";
+    let link = "https://tinyurl.com/bdh4ufz9?fmt=svg&size=200&case=";
     // user preferences and display of the cube
     let stagemask = document.getElementById("stagemask").checked;
     if (stagemask){
@@ -223,7 +223,7 @@ function caseupdate(){
     const casedisplay = document.createElement("iframe");
     casedisplay.height = 50;
     casedisplay.width = 50;
-    casedisplay.src = "http://cube.rider.biz/visualcube.php?fmt=svg&size=50&stage=f2l&case=" + element;
+    casedisplay.src = "https://tinyurl.com/bdh4ufz9?fmt=svg&size=50&stage=f2l&case=" + element;
 
     casedisplay.style.borderBottom = 'lime 1em solid';
 
