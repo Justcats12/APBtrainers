@@ -1,4 +1,4 @@
-# Justcats' APB oage
+# Justcats' APB page
 I made this page to help beginners and intermediate APB solvers with their recognition and algorithms.
 
 ## Content
