@@ -41,7 +41,7 @@ function submit(answer){
         scramble()
         document.activeElement.style.backgroundColor = 'green';
         document.activeElement.style.backgroundColor = '';
-        document.getElementById('feedback').style.backgroundColor = 'black';
+        document.getElementById('feedback').style.backgroundColor = 'transparent';
     } else{
         document.getElementById('feedback').style.backgroundColor = 'red';
     }
